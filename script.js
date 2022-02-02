@@ -1,3 +1,4 @@
+
 //1.Leer un número entero y determinar si es un número terminado en 4.
 function determinar4() {
     let n = document.getElementById("determinar").value;
@@ -173,5 +174,132 @@ function comunes() {
     }
 
 
+
+}
+//11.Leer dos números enteros de dos dígitos y determinar si la suma de los dos números origina un numero par
+function doblepar() {
+    let n, x, suma;
+
+    n = document.getElementById("par1").value;
+    x = document.getElementById("par1").value;
+
+    n = parseInt(n);
+    x = parseInt(x);
+
+    suma = n + x;
+
+    if (n > 9 && n < 100 && x > 9 && x < 100) {
+        if (suma % 2 == 0) {
+            console.log("el numero es par")
+        } else {
+            console.log("el numero es impar")
+        }
+    }
+}
+//12.Leer dos números enteros de dos dígitos y determinar a cuánto es igual la suma de todos los dígitos.
+function Doble_Digitos() {
+
+    let x, y, a, b, c, d, suma;
+    x = document.getElementById("Doble_Digitos_1").value;
+    y = document.getElementById("Doble_Digitos_2").value;
+    a = x.charAt(0);
+    b = x.charAt(1);
+    c = y.charAt(0);
+    d = y.charAt(1);
+
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    d = parseInt(d);
+
+    suma = a + b + c + d;
+
+    if (x.length == "2" && y.length == "2") {
+        console.log("La suma de los digitos es: " + suma);
+    }
+}
+
+//13.Leer un número entero de tres dígitos y determinar a cuánto es igual la suma de sus dígitos.
+function Sumar_3() {
+
+    let n, x, y, z, suma;
+    n = document.getElementById("Sumar_3").value;
+    x = n.charAt(0);
+    y = n.charAt(1);
+    z = n.charAt(2);
+
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+
+    suma = x + y + z;
+
+    if (n.length == "3") {
+        console.log("la suma de los digitos es: " + suma);
+    }
+    else {
+        console.log("tiene que ser de 3 digitos ")
+    }
+}
+//14.Leer un número entero de tres dígitos y determinar si al menos dos de sus tres dígitos son iguales.
+function Igualdad() {
+
+    let n, x, y, z;
+    n = document.getElementById("Igualdad").value;
+    x = n.charAt(0);
+    y = n.charAt(1);
+    z = n.charAt(2);
+
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+
+    if (n.length == "3") {
+        if (x == y && x == z) {
+            console.log("todos son iguales");
+        } else if (x == y && x != z) {
+            console.log("solo los 2 primeros son iguales");
+        }
+        else if (x != y && x == z) {
+            console.log("solo el primer y el ultimo son iguales");
+        }
+        else if (y != x && y == z) {
+            console.log("solo el segundo y terero son iguales");
+        }
+        else {
+            console.log("ninguno son iguales");
+        }
+    }
+    else {
+        console.log("Tiene que tener 3 digitos");
+    }
+}
+
+//15.Leer un número entero de tres dígitos y determinar en qué posición está el mayor dígito.
+function Mayor_3() {
+
+    let n, x, y, z;
+    n = document.getElementById("Mayor_3").value;
+    x = n.charAt(0);
+    y = n.charAt(1);
+    z = n.charAt(2);
+
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+
+    if (n.length == "3") {
+        if (x > y && x > z) {
+            console.log("El mayor esta el la primera posicion")
+        } else if (y > x && y > z) {
+            console.log("El mayor esta en la segunda posicion");
+        }
+        else if (z > x && z > y) {
+            console.log("El mayor esta en la tercera posicion")
+        }
+    }
+    else {
+        console.log("Tiene que tener 3 digitos ")
+    }
 
 }
