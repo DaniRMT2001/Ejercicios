@@ -303,3 +303,113 @@ function Mayor_3() {
     }
 
 }
+//16.Leer tres números enteros y mostrarlos ascendentemente.
+function ascendente() {
+    let x, y, z;
+    x = document.getElementById("ascendente1").value;
+    y = document.getElementById("ascendente2").value;
+    z = document.getElementById("ascendente3").value;
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+    if (x > y && x > z) {
+        if (y > z) {
+            console.log(z + " " + y + " " + z);
+        }
+        else {
+            console.log(y + " " + z + " " + x);
+        }
+
+    } else if (y > x && y > z) {
+        if (x > z) {
+            console.log(z + " " + x + " " + y)
+        }
+        else {
+            console.log(x + " " + z + " " + y)
+        }
+    }
+    else if (z > x && z > y) {
+        if (x > y) {
+            console.log(y + " " + x + " " + z)
+        }
+        else {
+            console.log(x + " " + y + " " + z)
+        }
+    }
+}
+//17.Leer tres números enteros de dos dígitos cada uno y determinar en cuál de ellos se encuentra 
+//el mayor dígito
+function Mayor_3_Enteros() {
+
+    let x, y, z;
+    x = document.getElementById("Mayor_3_Enteros1").value;
+    y = document.getElementById("Mayor_3_Enteros2").value;
+    z = document.getElementById("Mayor_3_Enteros3").value;
+
+    a = parseInt(x);
+    b = parseInt(y);
+    c = parseInt(z);
+
+    if (x.length == "2" && y.length == "2" && z.length == "2") {
+        if (a > b && a > c) {
+            console.log("El mayor es el: " + a);
+        }
+        else if (b > a && b > c) {
+            console.log("El mayor es el: " + b);
+        }
+        else if (c > a && c > b) {
+            console.log("El mayor es el: " + c);
+        }
+    }
+    else {
+        console.log("Cada numero tiene que ser de 2 digitos")
+    }
+}
+//18.Leer un número entero de tres dígitos y determinar cuántos dígitos pares tiene.
+function Digito_3_par() {
+
+    let x, y, z, n;
+    n=document.getElementById("Digito_3_par").value;
+    x = n.charAt(0);
+    y = n.charAt(1);
+    z = n.charAt(2);
+
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+
+    if (n.length = "3") {
+
+        if (x % 2 == 0 && y % 2 == 0 && z % 2 == 0) {
+            console.log("todos son pares")
+        }
+        else if (x % 2 == 0 && y % 2 == 0 && z % 2 == 1) {
+            console.log("El primer y segundo digito son pares")
+        }
+        else if (x % 2 == 0 && y % 2 == 1 && z % 2 == 0) {
+            console.log("El primer y ultimo digito son pares ")
+        }
+        else if (x % 2 == 1 && y % 2 == 0 && z % 2 == 0) {
+            console.log("El segundo y ultimo digito son pares")
+        }
+        else if (x % 2 == 0 && y % 2 == 1 && z % 2 == 1) {
+            console.log("Solo el primero digito es par")
+        }
+        else if (x % 2 == 1 && y % 2 == 0 && z % 2 == 1) {
+            console.log("Solo el segundo digito es par")
+        }
+        else if (x % 2 == 1 && y % 2 == 1 && z % 2 == 0) {
+            console.log("Solo el ultimo digito es par")
+        }
+        else {
+            console.log("Ninguno es par")
+        }
+    }
+}
+// 19.Leer un número entero de tres dígitos y determinar si alguno de sus dígitos es igual a la suma 
+// de los otros dos.
+
+let x,y,z, n="123"
+x=n.charAt(0);
+y=n.charAt(1);
+z=n.charAt(2)
