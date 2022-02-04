@@ -9,69 +9,276 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="ms-2 me-2">
+        <h1 class="text-center">Ejercicios de programacion</h1>
+        <div class="border">
+            <div class="d-flex justify-content-between">
+                <div class="m-1 border-end border-2  ">
+                    <h5 class=" me-2 ms-2">Determinar si termian en 4</h5>
+                    <div class="p-3">
+                        <input type="number" id="determinar" onkeyup="determinar4()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+                </div>
 
-    <input type="number" id="determinar" onkeyup="determinar4()" placeholder="determinar">
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Determinar si tienes 3 Digitos</h5>
+                    <div class="p-3">
+                        <input type="number" id="Digitos" onkeyup="Digitos_3()">
+                        <p id="terminar4"> dod</p>
+                    </div>
 
-    <input type="number" id="Digitos" onkeyup="Digitos_3()" placeholder="Digitos">
+                </div>
 
-    <input type="number" id="negativo" onkeyup="negativo()" placeholder="negaticvo">
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Determinar si es negativo</h5>
+                    <div class="p-3">
+                        <input type="number" id="negativo" onkeyup="negativo()">
+                        <p id="terminar4"> dod</p>
+                    </div>
 
-    <input type="number" id="sumar" onkeyup="sumar()" placeholder="sumar">
+                </div>
 
-    <input type="number" id="par" onkeyup="par()" placeholder="sumar">
+                <div class="m-1">
+                    <h5 class="me-2 ms-2">Determinar a cuánto es la suma de sus dígitos.</h5>
+                    <div class="p-3">
+                        <input type="number" id="sumar" onkeyup="sumar()">
+                        <p id="terminar4"> dod</p>
+                    </div>
 
-    <input type="number" id="primos" onkeyup="primos()" placeholder="sumar">
+                </div>
 
-    <input type="number" id="multiplo" onkeyup="multiplo()" placeholder="multiplo">
+            </div>
 
-    <input type="number" id="iguales" onkeyup="iguales()" class="mt-1" placeholder="iguales">
+            <!-------->
+            <hr>
+            <div class="d-flex justify-content-between">
+                <div class="m-1 border-end border-2 ">
+                    <h5 class=" me-2 ms-2"> Determinar numero par</h5>
+                    <div class="p-3">
+                        <input type="number" id="par" onkeyup="par()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+                </div>
 
-    <div class="mt-2">
-        <h5>mayor </h5>
-        <input type="number" id="mayor1" onkeyup="mayor()">
-        <input type="number" id="mayor2" onkeyup="mayor()">
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Determinar si es primo</h5>
+                    <div class="p-3">
+                        <input type="number" id="primos" onkeyup="primos()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Determinar si un dígito es múltiplo del otro</h5>
+                    <div class="p-3">
+                        <input type="number" id="multiplo" onkeyup="multiplo()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1 ">
+                    <h5 class="me-2 ms-2">Determinar si los dos dígitos son iguales</h5>
+                    <div class="p-3">
+                        <input type="number" id="iguales" onkeyup="iguales()">
+
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!------------>
+
+            <div class="d-flex justify-content-between">
+                <div class="m-1 border-end border-2 ">
+                    <h5 class=" me-2 ms-2">Determinar cuál es el mayor</h5>
+                    <div class="p-3 ">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="number" id="mayor1" onkeyup="mayor()">
+                            </div>
+                            <div>
+                                <input type="number" id="mayor2" onkeyup="mayor()">
+                            </div>
+                        </div>
+                        <p id="terminar4"> dod</p>
+                    </div>
+                </div>
+
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Dígitos comunes</h5>
+                    <div class="p-3">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="munber" id="comun1" onkeyup="comunes()">
+
+                            </div>
+                            <div>
+                                <input type="munber" id="comun2" onkeyup="comunes()">
+                            </div>
+                        </div>
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">origina un numero par</h5>
+                    <div class="p-3">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="munber" id="par1" onkeyup="doblepar()">
+
+                            </div>
+                            <div>
+                                <input type="munber" id="par2" onkeyup="doblepar()">
+                            </div>
+                        </div>
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1 ">
+                    <h5 class="me-2 ms-2">Suma de todos los dígitos</h5>
+                    <div class="p-3">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="munber" id="Doble_Digitos_1" onkeyup="Doble_Digitos()">
+
+                            </div>
+                            <div>
+                                <input type="munber" id="Doble_Digitos_2" onkeyup="Doble_Digitos()">
+                            </div>
+                        </div>
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr>
+            <!----->
+            <div class="d-flex justify-content-between">
+                <div class="m-1 border-end border-2 ">
+                    <h5 class=" me-2 ms-2"> A cuánto es igual la suma de sus dígitos</h5>
+                    <div class="p-3 ">
+                        <input type="number" id="Sumar_3" onkeyup="Sumar_3()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+                </div>
+
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2"> Determinar si al menos dos de sus tres dígitos son iguales</h5>
+                    <div class="p-3">
+                        <input type="number" id="Igualdad" onkeyup="Igualdad()">
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1  border-2">
+                    <h5 class="me-2 ms-2">En qué posición está el mayor dígito</h5>
+                    <div class="p-3">
+                        <input type="number" id="Mayor_3" onkeyup="Mayor_3()" placeholder="Mayor_3">
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <hr>
+            <!----->
+            <div class="d-flex justify-content-between">
+                <div class="m-1 border-end border-2 ">
+                    <h5 class=" me-2 ms-2">Mostrarlos ascendentemente</h5>
+                    <div class="p-3 ">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="number" id="ascendente1" onkeyup="ascendente()">
+
+                            </div>
+                            <div>
+                                <input type="number" id="ascendente2" onkeyup="ascendente()">
+                            </div>
+
+                        </div>
+                        <div class="mt-1">
+                            <input type="number" id="ascendente3" onkeyup="ascendente()">
+                        </div>
+                        <p id="terminar4"> dod</p>
+                    </div>
+                </div>
+
+                <div class="m-1 border-end border-2">
+                    <h5 class="me-2 ms-2">Determinar en cuál de ellos se encuentra el mayor dígito</h5>
+                    <div class="p-3">
+                        <div class="d-flex gap-1">
+                            <div>
+                                <input type="number" id="Mayor_3_Enteros1" onkeyup="Mayor_3_Enteros()">
+
+                            </div>
+                            <div>
+                                <input type="number" id="Mayor_3_Enteros2" onkeyup="Mayor_3_Enteros()">
+                            </div>
+                            <div>
+                                <input type="number" id="Mayor_3_Enteros3" onkeyup="Mayor_3_Enteros()">
+                            </div>
+                        </div>
+
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+                <div class="m-1  border-2">
+                    <h5 class="me-2 ms-2">Cuántos dígitos pares tiene</h5>
+                    <div class="p-3">
+                        <input type="number" id="Digito_3_par" onkeyup="Digito_3_par()" >
+                        <p id="terminar4"> dod</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+    <hr>
+    <div class="d-flex justify-content-between">
+        <div class="m-1 border-end border-2 ">
+            <h5 class=" me-2 ms-2">determinar si alguno de sus dígitos es igual a la suma de los otros dos</h5>
+            <input type="number" id="R_Suma_Digitos" onkeyup="R_Suma_Digitos()">
+        </div>
+
+        <div class="m-1 border-end border-2 ">
+            <h5 class=" me-2 ms-2">Mostrarlos ascendentemente</h5>
+            <input type="number" id="R_Suma_Digitos" onkeyup="R_Suma_Digitos()">
+        </div>
+        
+
+        <div class="m-1  border-2 ">
+            <h5 class=" me-2 ms-2">Mostrarlos ascendentemente</h5>
+            <input type="number" id="R_Suma_Digitos" onkeyup="R_Suma_Digitos()">
+        </div>
+        </div>
+
+
     </div>
-
-    <div class="mt-2">
-        <h5>comunes</h5>
-        <input type="munber" id="comun1" onkeyup="comunes()">
-        <input type="munber" id="comun2" onkeyup="comunes()">
+            
+        </div>
     </div>
-
-    <div class="mt-2">
-        <h5>pares</h5>
-        <input type="munber" id="par1" onkeyup="doblepar()">
-        <input type="munber" id="par2" onkeyup="doblepar()">
-    </div>
-
-    <div class="mt-2">
-        <h5>digitos</h5>
-        <input type="munber" id="Doble_Digitos_1" onkeyup="Doble_Digitos()">
-        <input type="munber" id="Doble_Digitos_2" onkeyup="Doble_Digitos()">
-    </div>
-
-    <input type="number" id="Sumar_3" onkeyup="Sumar_3()" placeholder="3 digitos">
-
-    <input type="number" id="Igualdad" onkeyup="Igualdad()" placeholder="Igualdad">
-    <input type="number" id="Mayor_3" onkeyup="Mayor_3()" placeholder="Mayor_3">
-
-    <div class="mt-2">
-        <input type="number" id="ascendente1" onkeyup="ascendente()">
-        <input type="number" id="ascendente2" onkeyup="ascendente()">
-        <input type="number" id="ascendente3" onkeyup="ascendente()">
-    </div>
-
-    <div class="mt-2">
-        <input type="number" id="Mayor_3_Enteros1" onkeyup="Mayor_3_Enteros()">
-        <input type="number" id="Mayor_3_Enteros2" onkeyup="Mayor_3_Enteros()">
-        <input type="number" id="Mayor_3_Enteros3" onkeyup="Mayor_3_Enteros()">
-    </div>
-
-    <input type="number" id="Digito_3_par" onkeyup="Digito_3_par()">
-    
     <script src="script.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

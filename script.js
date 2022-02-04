@@ -369,7 +369,7 @@ function Mayor_3_Enteros() {
 function Digito_3_par() {
 
     let x, y, z, n;
-    n=document.getElementById("Digito_3_par").value;
+    n = document.getElementById("Digito_3_par").value;
     x = n.charAt(0);
     y = n.charAt(1);
     z = n.charAt(2);
@@ -408,8 +408,100 @@ function Digito_3_par() {
 }
 // 19.Leer un número entero de tres dígitos y determinar si alguno de sus dígitos es igual a la suma 
 // de los otros dos.
+function R_Suma_Digitos() {
 
-let x,y,z, n="123"
-x=n.charAt(0);
-y=n.charAt(1);
-z=n.charAt(2)
+    let x, y, z, n = "422"
+    x = n.charAt(0);
+    y = n.charAt(1);
+    z = n.charAt(2);
+
+    x = parseInt(x);
+    y = parseInt(y);
+    z = parseInt(z);
+
+    if (n.length == "3") {
+        if (x + y == z) {
+            console.log("El tercero es la suma de los 2 primeros digitos")
+        }
+        else if (x + z == y) {
+            console.log("el segundo es la suma del primer y ultimo digito")
+        }
+        else if (y + z == x) {
+            console.log("el primero es la suma de los otros digitos")
+        }
+        else {
+            console.log("Ninguno es la suma del otro ")
+        }
+    }
+    else {
+        console.log("Debe terner 3 digito")
+    }
+}
+//20.Leer un número entero de cuatro dígitos y determinar a cuanto es igual la suma de sus dígitos.
+
+function Sumar_4_Digitos() {
+
+    let a, b, c, d, n, suma;
+    n = document.getElementById("Sumar_4_Digitos").value;
+    a = n.charAt(0);
+    b = n.charAt(1);
+    c = n.charAt(2);
+    d = n.charAt(3);
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    d = parseInt(d);
+
+    suma = a + b + c + d;
+
+    if (n.length == "4") {
+        console.log("La suma de susdigitos es: " + suma)
+    }
+    else {
+        console.log("El numero debe de tener 4 digitos")
+    }
+}
+//21.Leer un número entero de cuatro dígitos y determinar cuántos dígitos pares tiene.
+function Digito_4_pares() {
+
+    let a, b, c, d, n = document.getElementById("Digito_4_pares").value;
+    a = n.charAt(0);
+    b = n.charAt(1);
+    c = n.charAt(2);
+    d = n.charAt(3);
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    d = parseInt(d);
+
+    if (n.length == "4") {
+        if (a % 2 == 0 && b % 2 == 0 && c % 2 == 0 && d % 2 == 0) {
+            console.log("Todos los digitos son pares")
+        }
+        else if (a % 2 == 1 && b % 2 == 0 && c % 2 == 0 && d % 2 == 0 || a % 2 == 0 && b % 2 == 1 && c % 2 == 0 && d % 2 == 0 ||
+            a % 2 == 0 && b % 2 == 0 && c % 2 == 1 && d % 2 == 0 || a % 2 == 0 && b % 2 == 0 && c % 2 == 0 && d % 2 == 1) {
+            console.log("3 digitos son pares")
+        }
+        else if (a % 2 == 1 && b % 2 == 1 && c % 2 == 0 && d % 2 == 0 || a % 2 == 0 && b % 2 == 0 && c % 2 == 1 && d % 2 == 1 ||
+            a % 2 == 1 && b % 2 == 0 && c % 2 == 0 && d % 2 == 1 || a % 2 == 0 && b % 2 == 1 && c % 2 == 1 && d % 2 == 0
+            || a % 2 == 0 && b % 2 == 1 && c % 2 == 0 && d % 2 == 1 || a % 2 == 1 && b % 2 == 0 && c % 2 == 1 && d % 2 == 0) {
+            //1.c y d [a % 2 == 1 && b % 2 == 1 && c % 2 == 0 && d % 2 == 0 ]
+            //2.a y b [a % 2 == 0 && b % 2 == 0 && c % 2 == 1 && d % 2 == 1 ]          a=1;b=2;c=3;d=4
+            //3.b y c [a % 2 == 1 && b % 2 == 0 && c % 2 == 0 && d % 2 == 1 ]
+            //4.a y d [a % 2 == 0 && b % 2 == 1 && c % 2 == 1 && d % 2 == 0 ]        
+            //5.a y c [a % 2 == 0 && b % 2 == 1 && c % 2 == 0 && d % 2 == 1 ]         
+            //6.b y d [a % 2 == 1 && b % 2 == 0 && c % 2 == 1 && d % 2 == 0 ]         
+
+
+            console.log("2 digitos son pares")
+        }
+        else if (a % 2 == 0 && b % 2 == 1 && c % 2 == 1 && d % 2 == 1 || a % 2 == 1 && b % 2 == 0 && c % 2 == 1 && d % 2 == 1 ||
+            a % 2 == 1 && b % 2 == 1 && c % 2 == 0 && d % 2 == 1 || a % 2 == 1 && b % 2 == 1 && c % 2 == 1 && d % 2 == 0) {
+            console.log("solo 1 digitos es par")
+        }
+        else {
+            console.log("ninguno es par")
+
+        }
+    }
+}
